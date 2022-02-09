@@ -7,6 +7,8 @@
 
 class UserInterface;
 
+#include <climits>
+
 #include "Trip.h"
 #include "graph.h"
 

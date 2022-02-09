@@ -87,7 +87,7 @@ void Graph::readStops() {
 }
 
 void Graph::readLines() {
-    for (auto &file: std::filesystem::directory_iterator{LINE_FOLDER_PATH}) {
+    for (auto &file : std::filesystem::directory_iterator{LINE_FOLDER_PATH}) {
         std::ifstream f{file.path().string()};
 
         std::string lineCode = split(file.path().generic_string(), '_').at(1);
@@ -193,8 +193,9 @@ void Graph::dijkstraCost(const std::string &src, const std::string &dest,
             if (!f(u, v, e)) // descriptive variables :D
                 continue;
 
-            double w = u.dist + e.distance +
-                       (v.stop.getZone() != u.stop.getZone()) * 10;
+            double w =
+                // u.dist + e.distance +
+                (v.stop.getZone() != u.stop.getZone()) * 10;
 
             if (!v.visited && w < v.dist) {
                 v.line = e.code;

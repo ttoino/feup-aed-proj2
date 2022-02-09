@@ -42,23 +42,27 @@ class Trip {
     std::string destination{""};
 
     /**
-     * @brief The strategies to be applied to the calculation of the trip: defaults to shortest distance.
+     * @brief The strategies to be applied to the calculation of the trip:
+     * defaults to shortest distance.
      */
     Strategy strategy{MIN_DISTANCE};
 
     /**
-     * @brief The maximum length the user is willing to travel on foot: defaults to zero.
+     * @brief The maximum length the user is willing to travel on foot: defaults
+     * to zero.
      */
     double maxWalkDistance{0};
 
     /**
-     * @brief A boolean that defines if the user wants to travel during the day: defaults to true.
+     * @brief A boolean that defines if the user wants to travel during the day:
+     * defaults to true.
      */
     bool day{true};
 
     /**
-    * @brief A boolean that defines if the user wants to travel during the night: defaults to true.
-    */
+     * @brief A boolean that defines if the user wants to travel during the
+     * night: defaults to true.
+     */
     bool night{true};
 
     /**
@@ -72,9 +76,9 @@ class Trip {
     std::set<std::string> closedStops{};
 
 public:
-
     /**
-     * @brief Checks if the user specified a source from which to start the trip.
+     * @brief Checks if the user specified a source from which to start the
+     * trip.
      * @return A boolean confirming if the trip has a designated source.
      */
     bool hasSource() const;
@@ -104,20 +108,25 @@ public:
     Strategy getStrategy() const;
 
     /**
-     * @brief Get the maximum amount of distance the user is willing to travel on foot.
+     * @brief Get the maximum amount of distance the user is willing to travel
+     * on foot.
      * @return A double that represents the maximum distance.
      */
     double getMaxWalkDistance() const;
 
     /**
-     * @brief Get the setting the user defined regarding travelling during the day.
-     * @return A boolean that specifies if the trip will be done during the day or not.
+     * @brief Get the setting the user defined regarding travelling during the
+     * day.
+     * @return A boolean that specifies if the trip will be done during the day
+     * or not.
      */
     bool getDay() const;
 
     /**
-     * @brief Get the setting the user defined regarding travelling during the night.
-     * @return A boolean that specifies if the trip will be done during the night or not.
+     * @brief Get the setting the user defined regarding travelling during the
+     * night.
+     * @return A boolean that specifies if the trip will be done during the
+     * night or not.
      */
     bool getNight() const;
 
@@ -159,13 +168,15 @@ public:
 
     /**
      * @brief Set whether or not the trip can be done during the day.
-     * @param The new boolean that specifies if the trip can be done during the day.
+     * @param The new boolean that specifies if the trip can be done during the
+     * day.
      */
     void setDay(const bool &day);
 
     /**
      * @brief Set whether or not the trip can be done during the night.
-     * @param The new boolean that specifies if the trip can be done during the night.
+     * @param The new boolean that specifies if the trip can be done during the
+     * night.
      */
     void setNight(const bool &night);
 
@@ -188,7 +199,8 @@ public:
     void toggleStop(const std::string &stop);
 
     /**
-     * @brief Overloading of the << operator: Provides clarity regarding the settings chosen for the trip.
+     * @brief Overloading of the << operator: Provides clarity regarding the
+     * settings chosen for the trip.
      * @param out The output of the terminal.
      * @param trip The trip to be done.
      * @return The new custom output of the terminal.

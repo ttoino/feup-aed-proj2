@@ -232,9 +232,9 @@ void UserInterface::nightMenu(Trip &trip) {
 }
 
 void UserInterface::strategyMenu(Trip &trip) {
-    int opt = getUnsignedInput("(1) Minimize cost\n"
-                               "(2) Minimize bus changes\n"
-                               "(3) Minimize distance\n"
+    int opt = getUnsignedInput("(1) Minimize distance\n"
+                               "(2) Minimize cost\n"
+                               "(3) Minimize bus changes\n"
                                "(4) Minimize stops\n\n"
                                "Choose how you'd like to plan your trip: ",
                                1, 4);

@@ -192,13 +192,15 @@ public:
      * @param src The code of the source node.
      * @param dest The code of the destination node.
      * @param f The filter to use in the creation of the path.
-     * @return A list of nodes that represent the optimal path given the imposed restrictions.
+     * @return A list of nodes that represent the optimal path given the imposed
+     * restrictions.
      */
     std::list<Node> dijkstraPath(const std::string &src,
                                  const std::string &dest, const filter &f);
 
     /**
-     * @brief Applies a variant of the dijkstra algorithm that inflates the distance to nodes of different zones. [O(|E| log(|V|))]
+     * @brief Applies a variant of the dijkstra algorithm that inflates the
+     * distance to nodes of different zones. [O(|E| log(|V|))]
      *
      * @param src The code of the source node.
      * @param dest The code of the destination node.
@@ -213,13 +215,15 @@ public:
      * @param src The code of the source node.
      * @param dest The code of the destination node.
      * @param f The filter to use in the creation of the path.
-     * @return A list of nodes that represent the optimal path given the imposed restrictions.
+     * @return A list of nodes that represent the optimal path given the imposed
+     * restrictions.
      */
     std::list<Node> dijkstraCostPath(const std::string &src,
                                      const std::string &dest, const filter &f);
 
     /**
-     * @brief Applies a variant of the dijkstra algorithm that inflates the distance to nodes of different lines. [O(|E| log(|V|))]
+     * @brief Applies a variant of the dijkstra algorithm that inflates the
+     * distance to nodes of different lines. [O(|E| log(|V|))]
      *
      * @param src The code of the source node.
      * @param dest The code of the destination node.
@@ -229,35 +233,39 @@ public:
                        const filter &f);
 
     /**
-     * @brief Calls dijkstraLines() to calculate and return the path with the least amount of line changes.
+     * @brief Calls dijkstraLines() to calculate and return the path with the
+     * least amount of line changes.
      *
      * @param src The code of the source node.
      * @param dest The code of the destination node.
      * @param f The filter to use in the creation of the path.
-     * @return A list of nodes that represent the optimal path given the imposed restrictions.
+     * @return A list of nodes that represent the optimal path given the imposed
+     * restrictions.
      */
     std::list<Node> dijkstraLinesPath(const std::string &src,
-                                  const std::string &dest, const filter &f);
+                                      const std::string &dest, const filter &f);
 
-     /**
-      * @brief Applies the bfs (breadth-first search) algorithm. [O(|V| + |E|)]
-      *
-      * @param src The code of the source node.
-      * @param dest The code of the destination node.
-      * @param f The filter to use in the creation of the path.
-      */
+    /**
+     * @brief Applies the bfs (breadth-first search) algorithm. [O(|V| + |E|)]
+     *
+     * @param src The code of the source node.
+     * @param dest The code of the destination node.
+     * @param f The filter to use in the creation of the path.
+     */
     void bfs(const std::string &src, const std::string &dest, const filter &f);
 
     /**
-    * @brief Calls bfs() to calculate and return the path with the least amount of stops.
-    *
-    * @param src The code of the source node.
-    * @param dest The code of the destination node.
-    * @param f The filter to use in the creation of the path.
-    * @return A list of nodes that represent the optimal path given the imposed restrictions.
-    */
+     * @brief Calls bfs() to calculate and return the path with the least amount
+     * of stops.
+     *
+     * @param src The code of the source node.
+     * @param dest The code of the destination node.
+     * @param f The filter to use in the creation of the path.
+     * @return A list of nodes that represent the optimal path given the imposed
+     * restrictions.
+     */
     std::list<Node> bfsPath(const std::string &src, const std::string &dest,
-                    const filter &f);
+                            const filter &f);
 };
 
 #endif
